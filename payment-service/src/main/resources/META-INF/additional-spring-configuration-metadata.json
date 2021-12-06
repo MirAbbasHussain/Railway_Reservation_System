@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "paytm.payment.sandbox.website",
+    "type": "java.lang.String",
+    "description": "A description for 'paytm.payment.sandbox.website'"
+  },
+  {
+    "name": "paytm.payment.sandbox.industryTypeId",
+    "type": "java.lang.String",
+    "description": "A description for 'paytm.payment.sandbox.industryTypeId'"
+  },
+  {
+    "name": "paytm.payment.sandbox.details.MID",
+    "type": "java.lang.String",
+    "description": "A description for 'paytm.payment.sandbox.details.MID'"
+  }
+]}
