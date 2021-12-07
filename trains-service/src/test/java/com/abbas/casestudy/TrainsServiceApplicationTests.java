@@ -31,7 +31,7 @@ class TrainsServiceApplicationTests {
 	@Test
 	public void getTrainsTest() {
 		when(repository.findAll()).thenReturn(Stream
-				.of(new Train("123","Chennai Express","Chennai","Bangalore","12-10-2021 3:00pm", 500),new Train("123","Chennai Express","Chennai","Bangalore","12-10-2021 3:00pm", 500)).collect(Collectors.toList()));
+				.of(new Train("123","Chennai Express","Chennai","Bangalore","12-10-2021 3:00pm", 500, 50),new Train("123","Chennai Express","Chennai","Bangalore","12-10-2021 3:00pm", 500, 50)).collect(Collectors.toList()));
 				assertEquals(2,service.getTrains().size());
 				
 	}
@@ -49,7 +49,7 @@ class TrainsServiceApplicationTests {
 	
 	@Test
 	public void addTrainTest() throws EmptyInputException {
-		Train train = new Train("123","Chennai Express","Chennai","Bangalore","12-10-2021 3:00pm", 500);
+		Train train = new Train("123","Chennai Express","Chennai","Bangalore","12-10-2021 3:00pm", 500, 50);
 		when(repository.save(train)).thenReturn(train);
 		assertEquals(train, service.addTrain(train));
 	}

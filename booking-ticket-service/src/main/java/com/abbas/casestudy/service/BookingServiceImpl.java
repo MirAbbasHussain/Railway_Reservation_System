@@ -19,7 +19,7 @@ public class BookingServiceImpl implements BookingTicketService{
 
 	@Override
 	public BookingTicket addBook(BookingTicket book) throws EmptyInputException {
-		if(book.getQuantity().isEmpty() || book.getStartStation().isEmpty() || book.getEndStation().isEmpty()) {
+		if(book.getQuantity()== 0) {
 			throw new EmptyInputException();
 		}
 		return bookrepository.save(book);

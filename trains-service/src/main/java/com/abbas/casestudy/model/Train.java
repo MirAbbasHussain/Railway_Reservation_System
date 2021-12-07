@@ -14,8 +14,9 @@ public class Train {
 	private String endStation;
 	private String date;
 	private int fare;
+	private int capacity;
 
-	public Train(String trainid, String trainName, String startStation, String endStation, String date, int fare) {
+	public Train(String trainid, String trainName, String startStation, String endStation, String date, int fare, int capacity) {
 		super();
 		this.trainid = trainid;
 		this.trainName = trainName;
@@ -23,6 +24,17 @@ public class Train {
 		this.endStation = endStation;
 		this.date = date;
 		this.fare = fare;
+		this.capacity= capacity;
+	}
+
+
+	public int getCapacity() {
+		return capacity;
+	}
+
+
+	public void setCapacity(int capacity) {
+		this.capacity = capacity;
 	}
 
 

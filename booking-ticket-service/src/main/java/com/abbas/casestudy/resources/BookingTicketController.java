@@ -24,11 +24,15 @@ public class BookingTicketController {
 	
 	@Autowired
 	private BookingServiceImpl bookService;
+	
+	
 
 	@PostMapping("/addTicket")
 	public String addBook(@RequestBody BookingTicket book) throws EmptyInputException {
+
 		bookService.addBook(book);
 		return "Booked ticket with id :  "+book.getId();
+		
 
     }
 	

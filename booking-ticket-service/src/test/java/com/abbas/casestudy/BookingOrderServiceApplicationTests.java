@@ -31,13 +31,13 @@ class BookingOrderServiceApplicationTests {
 	@Test
 	public void getTicketTest() {
 		when(repository.findAll()).thenReturn(Stream
-				.of(new BookingTicket("123"," 3","Chennai","Bangalore"),new BookingTicket("124","2","Chennai","Mumbai")).collect(Collectors.toList()));
+				.of(new BookingTicket("123",3,"Chennai","Bangalore"),new BookingTicket("124",2,"Chennai","Mumbai")).collect(Collectors.toList()));
 		assertEquals(2,service.getBook().size());
 
 	}
 	@Test
 	public void addTrainTest() throws EmptyInputException {
-		BookingTicket ticket = new BookingTicket("123","1234","Chennai","Bangalore");
+		BookingTicket ticket = new BookingTicket("123",3,"Chennai","Bangalore");
 		when(repository.save(ticket)).thenReturn(ticket);
 		assertEquals(ticket, service.addBook(ticket));
 	}

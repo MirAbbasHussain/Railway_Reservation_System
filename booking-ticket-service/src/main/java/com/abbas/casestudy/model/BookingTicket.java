@@ -8,7 +8,7 @@ public class BookingTicket {
 	
 	@Id
 	private String id;
-	private String quantity;
+	private  int quantity;
 	private String startStation;
 	private String endStation;
 	
@@ -16,7 +16,7 @@ public class BookingTicket {
 		
 	}
 
-	public BookingTicket(String id, String quantity, String startStation, String endStation) {
+	public BookingTicket(String id, int quantity, String startStation, String endStation) {
 		this.id = id;
 		this.quantity = quantity;
 		this.startStation = startStation;
@@ -31,11 +31,11 @@ public class BookingTicket {
 		this.id = id;
 	}
 
-	public String getQuantity() {
+	public int getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(String quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 

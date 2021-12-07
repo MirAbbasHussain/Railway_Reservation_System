@@ -30,4 +30,12 @@ spring:
         uri: lb://Booking-Service
         predicates:
         - Path=/tickets/**
+      - id: Profile-Service
+        uri: http://localhost:8098
+        predicates:
+        - Path=/api/**
+      - id: PAYTM-PAYMENT
+        uri: lb://PAYTM-PAYMENT
+        predicates:
+        - Path=/**
  
